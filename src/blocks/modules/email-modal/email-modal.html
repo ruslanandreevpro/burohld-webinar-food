@@ -1,0 +1,21 @@
+<div id="emailModal" class="emailModal">
+    <div class="emailModal__content">
+        <span class="emailModalClose">&times;</span>
+        <h1>
+            Регистрация на бесплатный онлайн мастер-класс
+        </h1>
+        <form action="email_reg.php" class="form email_reg_form" id="goToNewPage">
+            <input type="text" name="name" id="name" placeholder="Ваше имя" required minlength="3">
+            <input type="tel" name="tel" id="tel" placeholder="Номер телефона" required pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$">
+            <input type="email" name="email" id="email" placeholder="Ваш E-mail" required>
+            <label>
+                <input type="checkbox" name="policy_accept" id="policy_accept" class="checkbox" checked>
+                <span class="checkbox-custom"></span>
+                <span class="label">
+                    Нажимая на кнопку “Отправить” вы даете согласие на обработку персональных данных
+                </span>
+            </label>
+            <button id="email_reg_btn" class="email_reg_btn">Отправить</button>
+        </form>
+    </div>
+</div>

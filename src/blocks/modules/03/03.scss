@@ -1,0 +1,227 @@
+.mainquestion {
+    padding: 90px 0;
+
+    &__question {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        margin-left: 45px;
+        position: relative;
+        font-family: "ReformaGroteskDemiC";
+        font-size: 32px;
+
+        p {
+            
+        }
+
+        &:before {
+            content: '03';
+            color: #a5a6a6;
+            position: absolute;
+            top: 50%;
+            left: -30px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__title {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        margin-left: 45px;
+        margin-top: 45px;
+        width: 900px;
+
+        h2 {
+            font-family: "ReformaGroteskDemiC";
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        margin-left: 45px;
+        margin-top: 30px;
+        width: 450px;
+
+        p {
+            font-size: 18px;
+            line-height: 27px;
+
+            span {
+                color: #ff0000;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 70px;
+        @include row-flex();
+        @include col();
+        @include size(12);
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 50px;
+
+                .icon {
+                    width: 100px;
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50px;
+                    box-shadow: 4px 6.928px 25px rgba(0,0,0,0.08);
+                    background-color: #eaeced;
+                    margin-right: 20px;
+
+                    img {
+                        
+                    }
+                }
+
+                .text {
+                    width: 290px;
+
+                    p {
+                        font-size: 16px;
+                        line-height: 27px;
+
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .mainquestion {
+
+        &__title {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .mainquestion {
+        padding: 30px 0;
+
+        &__question {
+            font-size: 24px;
+            margin-left: 30px;
+        }
+
+        &__title {
+            width: 100%;
+            margin-left: 0;
+
+            h2 {
+                font-size: 36px;
+            }
+        }
+
+        &__subtitle {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .mainquestion {
+
+        &__content {
+            margin-top: 45px;
+    
+            ul {
+    
+                li {
+                    margin-bottom: 30px;
+    
+                    .icon {
+                        width: 75px;
+                        height: 75px;
+    
+                        img {
+                            width: 60%;
+                            height: auto;
+                        }
+                    }
+    
+                    .text {
+                        width: calc(100% - 95px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .mainquestion {
+
+        &__question {
+
+            &:before {
+                top: 0;
+                transform: translateY(0);
+            }
+        }
+
+        &__title {
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        &__subtitle {
+
+            p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+
+        &__content {
+    
+            ul {
+    
+                li {
+                    flex-direction: column;
+    
+                    .icon {
+                        width: 75px;
+                        height: 75px;
+                        margin-bottom: 15px;
+    
+                        img {
+                            width: 60%;
+                            height: auto;
+                        }
+                    }
+    
+                    .text {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

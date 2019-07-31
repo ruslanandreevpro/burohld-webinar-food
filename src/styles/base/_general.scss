@@ -1,0 +1,23 @@
+body {
+    font-family: 'Museo Sans Cyrl';
+    color: #262626;
+    background-image: linear-gradient(180deg, #d9e0e6 0%, #eff3f7 100%);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    @include container();
+    @include sm(max-width, rem(510));
+    @include md(max-width, rem(690));
+    @include lg(max-width, rem(930));
+    @include xl(max-width, rem(1110));
+}

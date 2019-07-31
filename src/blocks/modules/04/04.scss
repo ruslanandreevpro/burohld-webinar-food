@@ -1,0 +1,121 @@
+.yourpower {
+    padding: 90px 0 70px;
+
+    .container {
+        position: relative;
+    }
+
+    &__title {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        margin-top: 45px;
+        width: 770px;
+
+        h2 {
+            font-family: "ReformaGroteskDemiC";
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        margin-top: 30px;
+        width: 570px;
+
+        p {
+            font-size: 18px;
+            line-height: 27px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__content {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        @include size-md(6);
+        margin-top: 60px;
+
+        &_image {
+            width: 490px;
+            position: absolute;
+            bottom: 45px;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .yourpower {
+
+        &__content {
+
+            &_image {
+                width: 370px;
+                right: -60px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .yourpower {
+
+        &__title {
+            width: 100%;
+        }
+
+        &__content {
+
+            &_image {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .yourpower {
+        padding: 30px 0;
+
+        &__title {
+            margin-left: 0;
+            
+            h2 {
+                font-size: 36px;
+            }
+        }
+
+        &__subtitle {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .yourpower {
+
+        &__title {
+            
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}

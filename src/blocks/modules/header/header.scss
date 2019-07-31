@@ -1,0 +1,180 @@
+.header {
+    padding: 45px 0 90px;
+
+    .container {
+        position: relative;
+    }
+
+    &__top {
+        font-family: 'ReformaGroteskDemiC';
+        font-size: 22px;
+        letter-spacing: 0px;
+        line-height: 28px;
+        text-transform: uppercase;
+        @include row-flex();
+        @include col();
+        @include size(12);
+        @include sm(align-items, center);
+
+        &_date {
+
+            span {
+                color: #ea3d36;
+            }
+
+            p {
+
+            }
+        }
+
+        &_title {
+            margin-left: 70px;
+
+            p {
+
+            }
+        }
+
+        &_logo {
+            margin-left: auto;
+        }
+    }
+
+    &__offer {
+        @include row-flex();
+        @include col();
+        @include size(12);
+        @include size-lg(6);
+        margin-top: 90px;
+
+        &_title {
+
+            h1 {
+                font-family: 'ReformaGroteskDemiC';
+                font-size: 58px;
+                letter-spacing: -0.5px;
+                line-height: 68px;
+                color: #262626;
+            }
+        }
+
+        &_subtitle {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            position: relative;
+
+            p {
+                margin-left: 15px;
+            }
+
+            &:before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                background-color: #a5a6a6;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &_img {
+            position: absolute;
+            top: 75px;
+            right: -390px;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    .header {
+
+        &__offer {
+
+            &_img {
+                width: 800px;
+                right: -270px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .header {
+
+        &__offer {
+
+            &_img {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .header {
+
+        &__top {
+            flex-direction: column;
+
+            &_date {
+                text-align: center;
+                order: 2;
+                margin-top: 15px;
+            }
+
+            &_title {
+                text-align: center;
+                order: 3;
+                margin-top: 15px;
+                margin-left: 0;
+            }
+
+            &_logo {
+                margin-right: auto;
+                order: 1;
+            }
+        }
+
+        &__offer {
+            margin-top: 60px;
+
+            &_title {
+
+                h1 {
+                    font-size: 46px;
+                    line-height: 56px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .header {
+
+        &__top {
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        &__offer {
+
+            &_title {
+
+                h1 {
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
